@@ -1,0 +1,16 @@
+[
+  {
+    "name": "openzeppelin-contracts",
+    "repository": "OpenZeppelin/openzeppelin-contracts",
+    "tag": "v5.0.2",
+    "archive_sha256": "18c7b7e949b9a82dcd8cd394426c9c2636dfc263aa2317d4749dbfa0c7b3925a",
+    "files": 6
+  },
+  {
+    "name": "forge-std",
+    "repository": "foundry-rs/forge-std",
+    "tag": "v1.9.6",
+    "archive_sha256": "53d2b498183cb7dc62cf726cc6c1a222ad728b0d87976a877ca1f3ed3707b1c6",
+    "files": 26
+  }
+]
