@@ -1,0 +1,17 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "LaunchToken",
+    "name": "Daemon",
+    "symbol": "DAEMON",
+    "decimals": 18
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "Token-only launch of Daemon (DAEMON) on Ethereum mainnet. The only contract in the accepted tree is LaunchToken in src/LaunchToken.sol: a fixed-supply OpenZeppelin ERC-20 with 18 decimals, no constructor arguments, no owner, and no mint, pause, blocklist, fee or upgrade functions; its constructor mints the whole supply to the factory and makes no external calls. There are no application contracts, so the contracts list is empty; the factory supplies the LP, the MerkleDistributor and the initialization-only pool guard. The pool pairs with IMD, the launch's chosen pair token, at the launch policy's 1.25% fee with tick spacing 60; the deployer derives the effective opening price from the policy's opening market cap rather than from initialPrice, which is written as the launch terms give it. Supply, allocations and the creator's trade fee share are handled by the factory and the launch policy, not by any contract here. The website brief assumes an ETH pair with ETH as currency0; the accepted terms fix an IMD pair, so the frontend must use the exact pool key from the deployment handoff and resolve its price denomination from that pool. No initialization calls are needed."
+}
